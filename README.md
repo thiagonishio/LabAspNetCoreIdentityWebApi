@@ -1,5 +1,7 @@
 # Lab Identity API
 
+[![Travis](https://img.shields.io/travis/com/thiagonishio/LabAspNetCoreIdentityWebApi?label=TRAVIS&logo=travis&style=for-the-badge)](https://travis-ci.org/github/thiagonishio/LabAspNetCoreIdentityWebApi) [![AppVeyor](https://img.shields.io/appveyor/build/thiagonishio/labaspnetcoreidentitywebapi?label=AppVeyor&logo=AppVeyor&style=for-the-badge)](https://ci.appveyor.com/project/thiagonishio/labaspnetcoreidentitywebapi)
+
 Inspirado pelos cursos do Eduardo Pires (https://desenvolvedor.io)
 
 Aprendi sobre badges, Cake, Travis CI e Appveyor no blog do Wellington Nascimento (https://www.wellingtonjhn.com)
@@ -18,6 +20,9 @@ Aprendi sobre badges, Cake, Travis CI e Appveyor no blog do Wellington Nasciment
   - Rodando InMemory para teste de integração
 - Swagger para documentação da WebApi
 - xUnit para testes de integração
+- CAKE (C# MAKE) para build e executar testes
+- Ferramenta de CI AppVeyor para rodar em ambiente Windows
+- Ferramenta de CI Travis para rodar em ambiente Linux e OSX
 
 ## Para rodar:
 
