@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sample.Identidade.API.Data
+namespace Exemplo.Identidade.API.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

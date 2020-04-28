@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Sample.Identidade.API.ViewModels;
+using Exemplo.Identidade.API.ViewModels;
 
-namespace Sample.Identidade.API.Controllers
+namespace Exemplo.Identidade.API.Controllers
 {
     [ApiController]
     [Route("api/identidade")]

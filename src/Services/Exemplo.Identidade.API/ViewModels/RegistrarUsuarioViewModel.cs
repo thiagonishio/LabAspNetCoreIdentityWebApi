@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Sample.Identidade.API.ViewModels
+namespace Exemplo.Identidade.API.ViewModels
 {
     public class RegistrarUsuarioViewModel
     {

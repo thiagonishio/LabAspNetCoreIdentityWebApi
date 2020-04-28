@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Sample.Identidade.API.Data;
+using Exemplo.Identidade.API.Data;
 
 namespace Exemplo.Identidade.API.Migrations
 {
