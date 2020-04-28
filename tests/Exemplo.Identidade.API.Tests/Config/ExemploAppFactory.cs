@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace Exemplo.Identidade.Tests.Config
+namespace Exemplo.Identidade.API.Tests.Config
 {
     public class ExemploAppFactory<TStartup> : WebApplicationFactory<TStartup> where TStartup : class
     {

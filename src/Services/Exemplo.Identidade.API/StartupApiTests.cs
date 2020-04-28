@@ -34,6 +34,7 @@ namespace Exemplo.Identidade.API
                 .AddDefaultTokenProviders();
 
             services.AddControllers();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +42,7 @@ namespace Exemplo.Identidade.API
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();                
             }
 
             app.UseHttpsRedirection();

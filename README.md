@@ -1,4 +1,4 @@
-# LabAspNetCoreIdentityWebApi
+# Lab Identity API
 
 Inspirado pelos cursos do Eduardo Pires (https://desenvolvedor.io)
 

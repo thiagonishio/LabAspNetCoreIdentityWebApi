@@ -1,10 +1,9 @@
-﻿using Exemplo.Identidade.API;
-using Microsoft.AspNetCore.Mvc.Testing;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
 using System;
 using System.Net.Http;
 using Xunit;
 
-namespace Exemplo.Identidade.Tests.Config
+namespace Exemplo.Identidade.API.Tests.Config
 {
     [CollectionDefinition(nameof(IntegrationApiTestsFixtureCollection))]
     public class IntegrationApiTestsFixtureCollection : ICollectionFixture<IntegrationTestsFixture<StartupApiTests>> { }
@@ -14,13 +13,16 @@ namespace Exemplo.Identidade.Tests.Config
         public readonly ExemploAppFactory<TStartup> Factory;
         public HttpClient Client;
 
+        public string UsuarioEmail;
+        public string UsuarioSenha;
+
         public IntegrationTestsFixture()
         {
             var clientOptions = new WebApplicationFactoryClientOptions
             {
                 AllowAutoRedirect = true,
                 BaseAddress = new Uri("http://localhost"),
-                HandleCookies = true,
+                //HandleCookies = true,
                 MaxAutomaticRedirections = 7
             };
 
