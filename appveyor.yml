@@ -1,0 +1,10 @@
+version: "{build}"
+image: Visual Studio 2019
+branches:
+  only:
+    - master
+pull_requests:
+  do_not_increment_build_number: true
+environment:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true  
