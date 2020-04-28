@@ -18,6 +18,28 @@ namespace Exemplo.Identidade.API.Tests
             _testsFixture = testsFixture;
         }
 
+        [Fact(DisplayName = "Realizar cadastro senha fraca")]
+        [Trait("Categoria", "Integração API - Usuário")]
+        public async void Usuario_RealizarCadastroComSenhaFraca_DeveRetornarMensagemDeErro()
+        {
+            //Arrange
+            var obj = new RegistrarUsuarioViewModel
+            {
+                Email = "teste@teste.com",
+                Senha = "teste",
+                SenhaConfirmacao = "teste"
+            };
+            string strData = JsonConvert.SerializeObject(obj);
+            var contentData = new StringContent(strData, Encoding.UTF8, "application/json");
+            
+            //Act
+            var postResponse = await _testsFixture.Client.PostAsync("/api/identidade/nova-conta", contentData);
+
+            //Assert
+            Assert.Equal(HttpStatusCode.BadRequest, postResponse.StatusCode);
+        }
+
+
         [Fact(DisplayName = "Realizar cadastro com sucesso"), TestPriority(1)]
         [Trait("Categoria", "Integração API - Usuário")]
         public async void Usuario_RealizarCadastro_DeveExecutarComSucesso()
@@ -61,6 +83,27 @@ namespace Exemplo.Identidade.API.Tests
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, postResponse.StatusCode);
+        }
+
+        [Fact(DisplayName = "Realizar login com falha, usuário não cadastrado")]
+        [Trait("Categoria", "Integração API - Usuário")]
+        public async void Usuario_RealizarLogin_DeveFalharPorNaoTerCadastro()
+        {
+            // Arrange
+            var obj = new RegistrarUsuarioViewModel
+            {
+                Email = "teste2@teste.com",
+                Senha = "Teste@123",
+                SenhaConfirmacao = "Teste@123"
+            };
+            string strData = JsonConvert.SerializeObject(obj);
+            var contentData = new StringContent(strData, Encoding.UTF8, "application/json");
+
+            // Act
+            var postResponse = await _testsFixture.Client.PostAsync("/api/identidade/autenticar", contentData);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, postResponse.StatusCode);
         }
     }
 }
