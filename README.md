@@ -2,6 +2,9 @@
 
 Inspirado pelos cursos do Eduardo Pires (https://desenvolvedor.io)
 
+Aprendi sobre badges, Cake, Travis CI e Appveyor no blog do Wellington Nascimento (https://www.wellingtonjhn.com)
+
+
 ## Como usar:
 
 - Necessário a última versão do Visual Studio 2019 e a última versão do .NET Core SDK.
