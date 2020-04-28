@@ -14,8 +14,8 @@ Inspirado pelos cursos do Eduardo Pires (https://desenvolvedor.io)
   - Rodando em SQL Server
   - Rodando InMemory para teste de integração
 - Swagger para documentação da WebApi
-- Teste de integração com xUnit
+- xUnit para testes de integração
 
 ## Para rodar:
 
-- No Package Manager Console PM> update-database para gerar o banco de dados
+- Para gerar o banco de dados, executar no Package Manager Console PM> update-database
