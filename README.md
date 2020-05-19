@@ -2,6 +2,7 @@
 
 [![Travis](https://img.shields.io/travis/com/thiagonishio/LabAspNetCoreIdentityWebApi?label=TRAVIS&logo=travis&style=for-the-badge)](https://travis-ci.org/github/thiagonishio/LabAspNetCoreIdentityWebApi)
 [![AppVeyor](https://img.shields.io/appveyor/build/thiagonishio/labaspnetcoreidentitywebapi?label=AppVeyor&logo=AppVeyor&style=for-the-badge)](https://ci.appveyor.com/project/thiagonishio/labaspnetcoreidentitywebapi)
+![GitHub](https://img.shields.io/github/license/thiagonishio/LabAspNetCoreIdentityWebApi?style=for-the-badge)
 
 Inspirado pelos cursos do Eduardo Pires (https://desenvolvedor.io)
 

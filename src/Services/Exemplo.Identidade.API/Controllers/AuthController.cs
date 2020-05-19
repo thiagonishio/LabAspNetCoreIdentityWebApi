@@ -20,8 +20,16 @@ namespace Exemplo.Identidade.API.Controllers
             _userManager = userManager;
         }
 
+        // Somente para testar
+        [HttpGet]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public async Task<ActionResult<string[]>> Index()
+        {   
+            return Ok("thiagonishio@gmail.com");
+        }
+
         [HttpPost("nova-conta")]
-        public async Task<ActionResult> Registrar(RegistrarUsuarioViewModel registrarUsuarioVM)
+        public async Task<ActionResult> Registrar([FromBody] RegistrarUsuarioViewModel registrarUsuarioVM)
         {
             if(!ModelState.IsValid) return BadRequest();
 
@@ -43,7 +51,8 @@ namespace Exemplo.Identidade.API.Controllers
         }
 
         [HttpPost("autenticar")]
-        public async Task<ActionResult> Login(LoginUsuarioViewModel loginUsuarioVM)
+        //[HttpPost]
+        public async Task<ActionResult> Login([FromBody] LoginUsuarioViewModel loginUsuarioVM)
         {
             if (!ModelState.IsValid) return BadRequest();
 

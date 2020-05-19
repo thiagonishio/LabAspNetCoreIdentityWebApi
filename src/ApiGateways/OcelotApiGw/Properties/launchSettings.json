@@ -1,27 +1,24 @@
 ﻿{
-  "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false,
+    "windowsAuthentication": false, 
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:2000",
-      "sslPort": 2001
+      "applicationUrl": "http://localhost:1000",
+      "sslPort": 1001
     }
   },
   "profiles": {
-    "IIS - Dev": {
+    "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/identidade",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Exemplo.Identidade.API": {
+    "OcelotApiGw": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/identidade",
-      "applicationUrl": "https://localhost:2001;http://localhost:2000",
+      "applicationUrl": "https://localhost:1001;http://localhost:1000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
