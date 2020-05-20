@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Exemplo.Identidade.API.Data;
 using System;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Exemplo.Identidade.API
 {
@@ -34,6 +36,9 @@ namespace Exemplo.Identidade.API
                 .AddDefaultTokenProviders();
 
             services.AddControllers();
+
+            services.AddOptions();
+            services.Configure<Controllers.Audience>(Configuration.GetSection("Audience"));
 
             services.AddSwaggerGen(c =>
             c.SwaggerDoc("v1", new OpenApiInfo()
