@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace Exemplo.Clientes.API.Controllers
@@ -7,6 +8,7 @@ namespace Exemplo.Clientes.API.Controllers
     [Route("api/[controller]")]
     public class ClientesController : Controller
     {
+        [Authorize]
         [HttpGet]
         public IEnumerable<string> Get()
         {
