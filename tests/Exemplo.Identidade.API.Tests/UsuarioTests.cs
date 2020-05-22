@@ -71,8 +71,10 @@ namespace Exemplo.Identidade.API.Tests
             // Arrange
             var obj = new LoginUsuarioViewModel
             {
-                Email = _testsFixture.UsuarioEmail,
-                Senha = _testsFixture.UsuarioSenha
+                //Email = _testsFixture.UsuarioEmail,
+                //Senha = _testsFixture.UsuarioSenha
+                Email = "teste@teste.com",
+                Senha = "Teste@123",
             };
 
             string strData = JsonConvert.SerializeObject(obj);

@@ -60,7 +60,7 @@ namespace Exemplo.Identidade.API.Controllers
         }
 
         [HttpPost("autenticar")]
-        public async Task<ActionResult> Login([FromBody] LoginUsuarioViewModel loginUsuarioVM)
+        public async Task<ActionResult> Login(LoginUsuarioViewModel loginUsuarioVM)
         {
             if (!ModelState.IsValid) return BadRequest();
 

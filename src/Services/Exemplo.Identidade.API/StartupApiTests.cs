@@ -35,6 +35,9 @@ namespace Exemplo.Identidade.API
 
             services.AddControllers();
             services.AddHttpContextAccessor();
+
+            services.AddOptions();
+            services.Configure<Controllers.Audience>(Configuration.GetSection("Audience"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
